@@ -1,0 +1,13 @@
+<h1>welcome for your work {{ username }} !</h1>
+<div class="container">
+  let's goo to the todo <a routerLink="/todos">list</a>
+</div>
+
+<div class="container">
+  click here to get customized  welcome message
+  <button class="btn btn-success" (click)="getWelcomeMessage()">get Welcome message</button>
+  <div *ngIf="welcomeMessageFromService">
+    <h2>the api response message is : </h2>
+    <div>{{welcomeMessageFromService}}</div>
+  </div>
+</div>
